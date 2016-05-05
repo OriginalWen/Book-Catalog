@@ -1,0 +1,30 @@
+CREATE TABLE Book(
+   ID   INT NOT NULL AUTO_INCREMENT,
+   ISBN VARCHAR(20) NOT NULL,
+   TITLE VARCHAR(20) NOT NULL,
+   AUTHOR VARCHAR(20) NOT NULL,
+   YEAR_PUBLISHED TIMESTAMP,
+   PRIMARY KEY (ID)
+);
+
+CREATE TABLE Category(
+   ID   INT NOT NULL AUTO_INCREMENT,
+   NAME VARCHAR(20) NOT NULL,
+   DESCRIPTION VARCHAR(80) NOT NULL,
+   PRIMARY KEY (ID)
+);
+
+CREATE TABLE Book_Category(
+   BOOK_ID   INT NOT NULL,
+   CATEGORY_ID INT NOT NULL,
+   CONSTRAINT fk_b FOREIGN KEY (BOOK_ID) REFERENCES Book(ID),
+   CONSTRAINT fk_c FOREIGN KEY (CATEGORY_ID) REFERENCES Category(ID));
+
+insert into book value("1","n23487","BraveHeart","Robert Simpson","1996-05-03");
+
+insert into book value("2","n235767","First Step","Rachel Green","1999-08-23");
+
+insert into Category value("1","drama","based on life but further");
+
+insert into Category value("2","romantic","stories between humans");
+
