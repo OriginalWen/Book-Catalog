@@ -1,5 +1,5 @@
 # Book-Catalog
-Write REST APIs using Java and Spring to
+Write API using Java and Spring to
 
 
 
@@ -46,9 +46,5 @@ Here are the tables and their fields:
 -- category_id: int
 
 
-
-BONUS:
-
------
 
 If there were 10 million entries in the book table, how would your code perform? what would you do differently to ensure it performs well?
